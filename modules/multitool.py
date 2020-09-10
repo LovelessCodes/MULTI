@@ -312,6 +312,7 @@ class MultiTool:
             print(f"[{Fore.RED}!{Style.RESET_ALL}] No duplicates to remove, continuing")
         p_list = []
         for line in set_dup_list:
-            if len(line) > 3:
+            if len(line) > 6 and len(line.split(":")[1]) > 3:
                 p_list.append(line)
+
         input(f"[{Fore.BLUE}?{Style.RESET_ALL}] Press {Fore.BLUE}'ENTER'{Style.RESET_ALL} to return to main menu\n")
